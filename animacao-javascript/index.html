@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+         body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #b1b1b1;
+         }
+         #square{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: all 0.5s ease-in-out;          
+            }
+        button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(66, 94, 255);
+            color: rgb(255, 255, 255);
+            }
+    </style>
+
+    <title>Animação</title>
+
+    <h1>Animação com HTML, CSS E JAVASCRIPT</h1>
+
+    <div id="square"></div>
+    <button id="animateBtn">Movimentar</button>
+
+    <script>
+        document.getElementById('animateBtn').addEventListener(
+            'click', function(){
+                const square = document.getElementById('square');
+
+                //ALTERNA ENTRE DOIS ESTADOS DE ANIMAÇÃO
+                if(square.style.top ==="200px"){
+                    square.style.top = "0";
+                    square.style.left = "0";
+                    square.style.backgroundColor = "yellow"
+                }else{
+                    square.style.top = "200px";
+                    square.style.left = "200px";
+                    square.style.backgroundColor = "green"
+                }
+            }
+        )
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
